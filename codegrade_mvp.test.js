@@ -47,8 +47,9 @@ const loginFlow = async () => {
   fireEvent.change(usernameInput(), { target: { value: 'Foo' } })
   fireEvent.change(passwordInput(), { target: { value: '12345678' } })
   fireEvent.click(loginBtn())
-  await screen.findByText(st.closuresTitle, queryOptions, waitForOptions)
-  await screen.findByText('Here are your articles, Foo!', queryOptions, waitForOptions)
+
+    await screen.findByText(st.closuresTitle, queryOptions, waitForOptions)
+    await screen.findByText('Here are your articles, Foo!', queryOptions, waitForOptions)
 }
 
 describe('Advanced Applications', () => {
